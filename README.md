@@ -5,7 +5,7 @@
 
 # Medhodology
 
-  ![Screenshot (339)](https://github.com/Anikaaasingh/Binary-Semantic-Segmentation-for-Garbage-Detection/assets/96921017/1a2f3ce8-d9c6-4256-b850-e8beed31e09c)
+![Screenshot (339)](https://github.com/Anikaaasingh/Binary-Semantic-Segmentation-for-Garbage-Detection/assets/96921017/39734f42-4346-4826-a634-b8ea84a13e76)
 
 # Selection and Annotation of Images for dataset
 * Deep learning techniques are used  in the semantic segmentation  process, and training the model on  a large amount of data is necessary.  So, using a drone (UAV), we took  over 1000 pictures of Varanasi,  India, from various angles to train  the model. To train the model to  recognize garbage, we carefully  chose photographs with clear  garbage. There were more than 300  appropriate photographs as a result  of the manual selection procedure.
