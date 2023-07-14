@@ -2,8 +2,12 @@
 * Garbage segmentation for Varanasi City with Drones using Computer Vision techniques.
 * Dataset included 1000+ drone images of Varanasi city annotated manually with Label Studio. Used patchify to tackle dataset and U-Net architecture for binary semantic segmentationof garbage patches.
 * Final reported model had binary cross entropy of 0.1512 and IOU score of 0.739.
-  
-  # Selection and Annotation of Images for dataset
+
+# Medhodology
+
+  ![Screenshot (339)](https://github.com/Anikaaasingh/Binary-Semantic-Segmentation-for-Garbage-Detection/assets/96921017/1a2f3ce8-d9c6-4256-b850-e8beed31e09c)
+
+# Selection and Annotation of Images for dataset
 * Deep learning techniques are used  in the semantic segmentation  process, and training the model on  a large amount of data is necessary.  So, using a drone (UAV), we took  over 1000 pictures of Varanasi,  India, from various angles to train  the model. To train the model to  recognize garbage, we carefully  chose photographs with clear  garbage. There were more than 300  appropriate photographs as a result  of the manual selection procedure.
 *Garbage was manually detected and annotated using Label Studio in all the  images and then annotations were converted to JSON Min format. Next we converted the json files to jpg files to obtain the  mask images.
 
@@ -16,6 +20,8 @@ In patch-based models, each patch is typically fed through a feature extraction 
 * The key feature of the U-Net architecture is its skip connections, which connect corresponding layers of the encoder and  decoder networks. These skip connections allow the decoder network to leverage both low-level and high-level features  from the encoder network, enabling accurate segmentation of objects of different sizes and shapes.
 * The U-Net architecture also includes several modifications, such as the use of "padding" in convolutional layers to preserve  image resolution and the incorporation of batch normalization to speed up training.
 * The U-Net architecture which we have used in this model uses binary segmentation in which garbage is considered as 1  (foreground) and rest all is considered 0 (background).
+  ![image](https://github.com/Anikaaasingh/Binary-Semantic-Segmentation-for-Garbage-Detection/assets/96921017/b6b0f3e9-604d-48a0-a995-c9f728a2bfa8)
+
   
 # Training 
 * In this collab notebook, we loaded the image patches and examined the labels. We discovered that the annotated  images had multiple labels, which was not desirable and caused our previous training attempts to fail. To overcome  this issue, we transformed the labels into binary labels representing background and foreground (0 and 1,  respectively). We then used a data loader to load the data for training the model.
@@ -23,6 +29,8 @@ In patch-based models, each patch is typically fed through a feature extraction 
   
 # Result
 *  Final reported model had binary cross entropy of 0.1512 and IOU score of 0.739.
+*  ![image](https://github.com/Anikaaasingh/Binary-Semantic-Segmentation-for-Garbage-Detection/assets/96921017/ab2fb75d-200e-4cb0-b6f4-a2303063289f)
+
   
 # Future Modifications for better results
 * The model is performing well and predicting garbage from images; now, our task will be to do the post-  processing part and improve the model IOU score.
@@ -30,6 +38,16 @@ In patch-based models, each patch is typically fed through a feature extraction 
 * Model Architecture: Experimenting with different model architectures or variations of existing architectures. This could involve increasing the depth or width of the network, introducing skip connections, or utilizing pre-trained models for transfer learning.
 * Data Augmentation: Applying data augmentation techniques to increase the diversity of the training data. This can include random rotations, scaling, flipping, or adding noise to the input images and corresponding labels. Augmenting the data can help the model generalize better and improve its performance.
 * Training Data Quality: Ensuring the quality and accuracy of the training data. Inaccurate or mislabeled annotations can negatively impact the model's performance. Review and validate the training data to minimize any errors or inconsistencies.
+
+# Uses Of This Model
+* Environment:
+This model will help detect the garbage hotspots hence helping in effective and targeted cleaniliness.
+* Health:
+As garbage hotspots are breeding ground for various disease causing organisms so locating them would make it  easier to eliminate them.
+* Resource Saving
+Accurate identification of garbage filled areas would help in minimum wastage of resources and data based  model would help study patterns of garbage deposition over an area or tell area with high waste generation etc.
+
+
 
 
 
